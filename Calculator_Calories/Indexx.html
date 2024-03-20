@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Calorías</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" type="image/png" href="Cal.png">
+  <style>
+    /* Estilos para el botón de regresar */
+    .btn {
+  border: none; 
+  color: black; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  position: relative;
+  top: -200px;
+  left: 50px;
+  font-weight: bold;
+
+}
+.primary {background-color: rgba(244, 244, 244, 0.5); /* Color de fondo transparente */
+} 
+.primary:hover {background: #5cbde4; 
+  color: white;}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Calorías</h1>
+    <div>
+      <label for="peso">Peso (kg):</label>
+      <br>
+      <input type="text" id="peso" min="1" required>
+    </div>
+    <div>
+      <label for="altura">Altura (cm):</label>
+      <br>
+      <input type="text" id="altura" min="1" required>
+    </div>
+    <div>
+      <label for="edad">Edad:</label>
+      <br>
+      <input type="text" id="edad" min="1" required>
+    </div>
+    <div>
+      <label for="actividad">Nivel de actividad:</label>
+      <br>
+      <select id="actividad">
+        <option value="1.2">Sedentario (poco o ningún ejercicio)  -> 1.2</option>
+        <option value="1.375">Ligero (ejercicio ligero/actividad deportiva ligera 1-3 días/semana)  -> 1.375</option>
+        <option value="1.55">Moderado (ejercicio moderado/actividad deportiva moderada 3-5 días/semana)  -> 1.55</option>
+        <option value="1.725">Activo (ejercicio duro/actividad deportiva dura 6-7 días/semana)  -> 1.725</option>
+        <option value="1.9">Muy activo (trabajo físico duro o ejercicio intenso y actividad deportiva muy intensa, ejercicio 2 veces al día)  -> 1.9</option>
+      </select>
+    </div>
+    <div>
+      <label for="genero">Género:</label>
+      <input type="radio" id="hombre" name="genero" value="hombre" checked>
+      <label for="hombre">Hombre</label>
+      <input type="radio" id="mujer" name="genero" value="mujer">
+      <label for="mujer">Mujer</label>
+    </div>
+    <button onclick="calcularCalorias()">Calcular</button>
+    <div id="resultado"></div>
+  </div>
+  
+<!-- Botón de regresar -->
+<button class="btn primary" onclick="history.back()">Regresar</button>
+
+  <!-- Footer con mi nombre -->
+  <footer>
+    <p>© 2024 Joel Steven Pineda Rincon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

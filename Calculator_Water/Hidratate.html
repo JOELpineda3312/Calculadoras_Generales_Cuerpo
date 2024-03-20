@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Hidratacion Diaria</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" type="image/png" href="hidratacion.png">
+  <style>
+    /* Estilos para el botón de regresar */
+    .btn {
+  border: none; 
+  color: black; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  position: relative;
+  top: -200px;
+  left: 50px;
+  font-weight: bold;
+
+}
+.primary {background-color: rgba(244, 244, 244, 0.5); /* Color de fondo transparente */
+} 
+.primary:hover {background: #5cbde4; 
+  color: white;}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Hidratacion Diaria</h1>
+    <div>
+      <label for="peso">Peso (kg):</label>
+      <br>
+      <input type="text" id="peso" min="1" required>
+    </div>
+    <div>
+      <label for="altura">Altura (cm):</label>
+      <br>
+      <input type="text" id="altura" min="1" required>
+    </div>
+    <div>
+      <label for="edad">Edad:</label>
+      <br>
+      <input type="text" id="edad" min="1" required>
+    </div>
+    <div><br>
+      <label for="actividad">Nivel de Deshidratacion:</label>
+      <select id="actividad">
+        <option value="30">Comun  -> 30</option>
+        <option value="60">Moderada ( Practica de Ejercicio ) -> 60</option>
+        <option value="90">Severa - Alta ( Ejercicio Arduo - Embriago )  -> 90</option>
+      </select>
+    </div>
+    <br>
+    <button onclick="calcularHidratacion()">Calcular</button>
+    <div id="resultado"></div>
+  </div>
+
+  <!-- Botón de regresar -->
+  <button class="btn primary" onclick="history.back()">Regresar</button>
+
+  <!-- Footer con tu nombre -->
+  <br>
+  <br>
+  <footer>
+    <p>© 2024 Joel Steven Pineda Rincon</p>
+  </footer>
+
+  <script src="Formula.js"></script>
+</body>
+</html>
