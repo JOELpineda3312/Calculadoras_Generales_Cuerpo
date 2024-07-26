@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #c2c2c2;
-    background-image: url('comida-png.jpg');
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.xbox.com%2Fes-co%2Fgames%2Fstore%2Fhalo-infinite-campaa%2F9NP1P1WFS0LB&psig=AOvVaw0p0JNlCq9iQ5a07KVfALok&ust=1722046954620000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPCy-_rSw4cDFQAAAAAdAAAAABAE');
     background-size: cover; /* Para ajustar la imagen al tamaño del cuerpo */
     background-position: center; /* Para centrar la imagen */
   }
